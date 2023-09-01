@@ -12,6 +12,14 @@ public:
     return (static_cast<long long>(n * (n + 1)) / 2);
 
 	}
+
+  //using recursion
+  // recursive solution become slow for large input, as they involve lots of 
+  // function call and stack operation.
+//   long long seriesSum(long long n){
+//       if(n==0) return 0;
+//       return n+seriesSum(n-1);
+//   }
 };
 
 //{ Driver Code Starts.
