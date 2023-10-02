@@ -39,9 +39,9 @@ class Solution{
     //Function to insert a node at the beginning of the linked list.
     Node *insertAtBegining(Node *head, int x) {
        // Your code here
-       Node *curr =new Node(x);
-       curr->next = head;
-       return curr;
+       Node *newnode=new Node(x);
+       newnode->next=head;
+       return newnode;
     }
     
     
@@ -49,15 +49,15 @@ class Solution{
     Node *insertAtEnd(Node *head, int x)  {
        // Your code here
        if(head==NULL){
-           Node *curr = new Node(x);
-           return curr;
+           Node *newnode= new Node(x);
+           return newnode;
        }
-      Node *curr =head;
-      while(curr->next!=NULL){
-          curr=curr->next;
-      }
-      curr->next=new Node(x);
-      return head;
+       Node *newnode=head;
+       while(newnode->next!=NULL){
+           newnode =newnode->next;
+       }
+       newnode->next = new Node(x);
+       return head;
     }
 };
 
