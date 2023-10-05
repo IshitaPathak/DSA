@@ -11,7 +11,7 @@ public:
     bool hasCycle(ListNode *head) {
         ListNode *curr=head;
         // if there is only one node or two node in LL then cycle is not poosible
-        if(head==NULL || head->next==NULL){
+        if(head==NULL || head->next==NULL || head->next->next==NULL){
             return false;
         }
         ListNode *slow=head;
@@ -19,7 +19,7 @@ public:
         // if both the pointers slow and fast meet at same point then it means loop hai
         // slow jab tak fast ke equal ni hai tb tk cycle me ghumte rhenge
         while(slow!=fast){
-            if(fast==NULL || fast->next==NULL){
+            if(fast==NULL || fast->next==NULL ){
                 return false;
             }
             slow=slow->next;
