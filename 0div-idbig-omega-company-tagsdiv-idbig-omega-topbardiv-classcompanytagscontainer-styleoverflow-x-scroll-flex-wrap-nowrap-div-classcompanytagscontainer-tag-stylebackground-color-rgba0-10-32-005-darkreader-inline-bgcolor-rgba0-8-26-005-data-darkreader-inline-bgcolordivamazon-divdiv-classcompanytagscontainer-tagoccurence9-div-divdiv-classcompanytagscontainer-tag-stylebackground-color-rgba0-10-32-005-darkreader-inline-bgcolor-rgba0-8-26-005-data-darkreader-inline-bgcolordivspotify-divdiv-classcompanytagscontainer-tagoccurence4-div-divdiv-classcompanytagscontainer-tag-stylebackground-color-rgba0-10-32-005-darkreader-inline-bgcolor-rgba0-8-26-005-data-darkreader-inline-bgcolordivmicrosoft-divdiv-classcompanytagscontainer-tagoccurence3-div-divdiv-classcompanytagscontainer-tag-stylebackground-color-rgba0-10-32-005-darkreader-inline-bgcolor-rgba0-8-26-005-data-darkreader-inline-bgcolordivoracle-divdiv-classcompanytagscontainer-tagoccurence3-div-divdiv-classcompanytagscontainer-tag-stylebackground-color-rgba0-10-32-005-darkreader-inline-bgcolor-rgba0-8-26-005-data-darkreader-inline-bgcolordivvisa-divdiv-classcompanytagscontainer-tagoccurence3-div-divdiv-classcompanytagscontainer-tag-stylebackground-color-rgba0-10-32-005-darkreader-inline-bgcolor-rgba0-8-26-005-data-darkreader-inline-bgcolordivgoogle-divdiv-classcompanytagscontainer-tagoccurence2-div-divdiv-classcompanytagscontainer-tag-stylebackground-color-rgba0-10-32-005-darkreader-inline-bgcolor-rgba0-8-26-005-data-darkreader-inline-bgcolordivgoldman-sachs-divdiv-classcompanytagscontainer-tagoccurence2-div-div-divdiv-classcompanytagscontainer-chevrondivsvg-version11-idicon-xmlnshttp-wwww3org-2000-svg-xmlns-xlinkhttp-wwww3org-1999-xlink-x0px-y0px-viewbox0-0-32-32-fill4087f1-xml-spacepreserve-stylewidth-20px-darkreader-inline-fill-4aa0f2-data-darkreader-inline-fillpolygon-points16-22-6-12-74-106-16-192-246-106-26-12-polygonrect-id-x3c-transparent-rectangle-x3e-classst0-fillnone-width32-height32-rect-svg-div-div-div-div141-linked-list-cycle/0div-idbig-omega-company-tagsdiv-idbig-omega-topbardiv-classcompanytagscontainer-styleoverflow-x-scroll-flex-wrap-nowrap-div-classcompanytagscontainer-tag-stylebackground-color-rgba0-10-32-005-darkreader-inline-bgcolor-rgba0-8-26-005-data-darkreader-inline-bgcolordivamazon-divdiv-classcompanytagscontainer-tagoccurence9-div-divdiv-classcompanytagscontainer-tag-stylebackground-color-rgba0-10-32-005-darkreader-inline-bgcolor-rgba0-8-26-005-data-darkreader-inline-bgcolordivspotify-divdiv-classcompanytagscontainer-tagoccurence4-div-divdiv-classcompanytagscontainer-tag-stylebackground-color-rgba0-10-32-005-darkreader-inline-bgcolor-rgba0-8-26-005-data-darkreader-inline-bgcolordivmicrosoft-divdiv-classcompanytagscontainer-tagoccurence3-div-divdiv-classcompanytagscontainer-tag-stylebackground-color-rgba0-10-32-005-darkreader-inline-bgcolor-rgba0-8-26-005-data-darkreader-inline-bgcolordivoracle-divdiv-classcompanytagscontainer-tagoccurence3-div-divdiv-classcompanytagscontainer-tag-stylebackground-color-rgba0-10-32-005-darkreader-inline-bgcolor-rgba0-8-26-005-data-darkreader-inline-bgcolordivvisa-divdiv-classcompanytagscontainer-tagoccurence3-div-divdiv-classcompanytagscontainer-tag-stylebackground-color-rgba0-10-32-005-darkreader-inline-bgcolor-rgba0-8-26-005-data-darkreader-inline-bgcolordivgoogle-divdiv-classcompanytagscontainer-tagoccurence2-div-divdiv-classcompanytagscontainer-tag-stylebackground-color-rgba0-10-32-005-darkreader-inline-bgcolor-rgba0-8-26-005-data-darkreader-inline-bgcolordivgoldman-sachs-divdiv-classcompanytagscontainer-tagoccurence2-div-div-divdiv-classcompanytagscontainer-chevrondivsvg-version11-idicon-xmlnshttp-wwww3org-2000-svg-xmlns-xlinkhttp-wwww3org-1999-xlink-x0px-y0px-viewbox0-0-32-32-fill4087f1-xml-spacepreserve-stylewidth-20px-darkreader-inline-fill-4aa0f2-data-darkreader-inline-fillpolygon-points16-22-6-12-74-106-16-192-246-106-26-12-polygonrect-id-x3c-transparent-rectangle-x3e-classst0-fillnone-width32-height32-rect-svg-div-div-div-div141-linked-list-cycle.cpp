@@ -10,8 +10,8 @@ class Solution {
 public:
     bool hasCycle(ListNode *head) {
         ListNode *curr=head;
-        // if there is only one node or two node in LL then cycle is not poosible
-        if(head==NULL || head->next==NULL || head->next->next==NULL){
+        // if there is only one node or no node in LL then cycle is not poosible
+        if(head==NULL || head->next==NULL){
             return false;
         }
         ListNode *slow=head;
