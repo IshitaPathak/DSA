@@ -7,12 +7,11 @@ public:
         for (int i = 0; i < nums.size(); i++) {
         mp[nums[i]]++;
         }
-
-          for (const auto& entry : mp) {
-        if (entry.second == 2) {
-         ans.push_back(entry.first);
+        
+        for(auto itr=mp.begin();itr!=mp.end();itr++){
+            if(itr->second==2) 
+                ans.push_back(itr->first);
         }
-      }
         return ans;
 
     }
