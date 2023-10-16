@@ -42,19 +42,14 @@ class Solution{
     int getMiddle(Node *head)
     {
         // Your code here
-        // finding number of nodes in linkedlist
-        Node *temp=head;
-        int n=0;
-        while(temp!=NULL){
-            n++;
-            temp=temp->next;
-        }
-        int half=n/2;
-        temp=head;
-        while(half--){
-            temp=temp->next;
-        }
-        return {temp->data};
+       // using two pointer (single iteration)
+       Node *fast = head;
+       Node *slow = head;
+       while(fast!=NULL&&fast->next!=NULL){
+           slow=slow->next;
+           fast=fast->next->next;
+       }
+       return {slow->data};
     }
 };
 
