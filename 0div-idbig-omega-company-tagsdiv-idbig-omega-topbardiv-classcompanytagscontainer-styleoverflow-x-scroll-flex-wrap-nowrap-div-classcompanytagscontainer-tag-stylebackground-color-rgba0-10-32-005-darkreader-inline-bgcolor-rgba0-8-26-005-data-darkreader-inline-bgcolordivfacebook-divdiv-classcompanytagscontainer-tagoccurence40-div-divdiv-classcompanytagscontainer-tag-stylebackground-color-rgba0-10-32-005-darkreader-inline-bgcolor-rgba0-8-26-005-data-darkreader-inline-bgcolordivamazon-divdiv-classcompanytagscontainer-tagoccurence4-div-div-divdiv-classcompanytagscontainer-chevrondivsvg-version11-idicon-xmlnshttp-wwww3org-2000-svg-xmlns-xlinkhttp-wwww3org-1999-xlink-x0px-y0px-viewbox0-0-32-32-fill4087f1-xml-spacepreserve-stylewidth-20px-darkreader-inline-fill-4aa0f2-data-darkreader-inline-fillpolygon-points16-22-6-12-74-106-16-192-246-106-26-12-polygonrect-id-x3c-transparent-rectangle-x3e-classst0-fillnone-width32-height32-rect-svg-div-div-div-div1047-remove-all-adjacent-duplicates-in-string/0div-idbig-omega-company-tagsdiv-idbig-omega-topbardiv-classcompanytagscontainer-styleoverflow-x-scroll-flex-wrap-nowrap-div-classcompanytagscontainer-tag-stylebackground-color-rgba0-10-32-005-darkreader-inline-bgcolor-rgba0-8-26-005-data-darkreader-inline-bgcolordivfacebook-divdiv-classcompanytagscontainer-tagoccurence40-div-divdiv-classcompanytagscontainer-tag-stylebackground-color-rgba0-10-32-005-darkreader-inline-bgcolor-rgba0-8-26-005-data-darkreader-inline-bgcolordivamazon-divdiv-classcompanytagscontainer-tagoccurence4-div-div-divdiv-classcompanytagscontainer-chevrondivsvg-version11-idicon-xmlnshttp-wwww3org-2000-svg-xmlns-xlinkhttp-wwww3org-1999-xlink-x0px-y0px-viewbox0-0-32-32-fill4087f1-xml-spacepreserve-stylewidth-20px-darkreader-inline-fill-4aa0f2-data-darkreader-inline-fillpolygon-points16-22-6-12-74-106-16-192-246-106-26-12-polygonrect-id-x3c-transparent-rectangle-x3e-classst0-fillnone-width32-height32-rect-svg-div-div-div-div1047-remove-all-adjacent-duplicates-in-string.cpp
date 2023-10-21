@@ -3,19 +3,18 @@ public:
     string removeDuplicates(string s) {
         stack<char> st;
         int n=s.size();
-        for(int i=0;i<n;i++){
+        for(int i=n-1;i>=0;i--){
             if(st.empty()==true || st.top()!=s[i]){
                 st.push(s[i]);
-            }else{
+             }else{
                 st.pop();
             }
         }
-        string ans="";
-        while(st.size()!=0){
-            ans+=st.top();
+        string result="";
+        while(st.empty()!=true){
+            result+=st.top();
             st.pop();
         }
-        reverse(ans.begin(),ans.end());
-        return ans;
+        return result;
     }
 };
