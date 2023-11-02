@@ -6,11 +6,19 @@ public:
         int count=0;
         for(int i=0;i<n;i++){
             char c=s[i];
-            if(c=='(' && count++>0){
-                   ans+=c;
+            if(c=='(' && count==0){
+                count++;
             }
-            if(c==')' && count-->1){
-                   ans+=c;
+            else if(c=='(' && count>=1){
+                ans+=c;
+                count++;
+            }
+            else if(c==')' && count==1){
+                count--;
+            }
+            else if(c==')' && count>1){
+               ans+=c;
+                count--;
             }
         }
         return ans;
