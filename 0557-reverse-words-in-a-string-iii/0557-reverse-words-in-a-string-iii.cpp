@@ -25,7 +25,7 @@ public:
         for(int i=0;i<temp.size();i++){
             result += temp[i];
             if(i<temp.size()-1){
-                result+=' '; //adding space between words
+                result+=" "; //adding space between words
             }
         }
         return result;
