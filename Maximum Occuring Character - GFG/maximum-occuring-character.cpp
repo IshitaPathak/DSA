@@ -37,7 +37,7 @@ class Solution
         }
         
         int maxCount=0;
-        char maxChar='\0';
+        char maxChar='@';
         for(auto itr=m.begin();itr!=m.end();itr++){
               if (itr->second > maxCount || (itr->second == maxCount && itr->first < maxChar)) {
                 maxCount = itr->second;
