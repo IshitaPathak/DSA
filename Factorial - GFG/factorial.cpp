@@ -7,11 +7,9 @@ class Solution{
 public:
     long long int factorial(int N){
         //code here
-        long long ans=1;
-        for(int i=1;i<=N;i++){
-            ans=ans*i;
-        }
-        return ans;
+        if(N==1) return 1;
+        if(N==0) return 1;
+        return N*factorial(N-1);
     }
 };
 
