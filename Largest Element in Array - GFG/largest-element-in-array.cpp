@@ -12,13 +12,12 @@ class Solution
 public:
     int largest(vector<int> &arr, int n)
     {
-        int letLargest=arr[0]; // let the first element is largest
-        for(int i=0;i<n;i++){
-            if(arr[i]>letLargest){
-                letLargest=arr[i];
-            }
+        int ans=arr[0];
+        for(int i=1;i<n;i++){
+            if(arr[i]>ans)
+            ans=arr[i];
         }
-        return letLargest;
+        return ans;
     }
 };
 
