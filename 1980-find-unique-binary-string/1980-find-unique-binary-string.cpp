@@ -9,8 +9,8 @@ public:
         for(int i=0;i<n;i++){
             s.insert(stoi(nums[i],0,2));
         }
-        int m=pow(2,n);
-        for(int i=0;i<m;i++){
+        // int m=pow(2,n);
+        for(int i=0;i<n+1;i++){
              if (s.find(i) == s.end()) {
             // If not in the set, it's the answer
             string binaryStr = bitset<64>(i).to_string().substr(64 - n);
