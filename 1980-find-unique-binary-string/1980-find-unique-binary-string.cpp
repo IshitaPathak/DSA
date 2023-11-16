@@ -13,7 +13,7 @@ public:
         for(int i=0;i<m;i++){
              if (s.find(i) == s.end()) {
             // If not in the set, it's the answer
-            string binaryStr = bitset<32>(i).to_string().substr(32 - n);
+            string binaryStr = bitset<64>(i).to_string().substr(64 - n);
             return binaryStr;
           }
         }
