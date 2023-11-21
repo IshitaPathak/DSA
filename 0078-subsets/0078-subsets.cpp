@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<int>> ans;
-    void sub(vector<int> &nums,int i,vector<int> &temp){
+    void sub(vector<int> &nums,int i,vector<int> temp){
         int n=nums.size();
         if(i>=n){
             ans.push_back(temp);
