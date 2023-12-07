@@ -5,8 +5,8 @@ public:
         string ans="";
         bool flag = false;
         for(int i=n-1;i>=0;i--){
-            if(flag==true) break;
-           if(num[i]%2!=0){
+           if(flag==true) break;
+           if((num[i]-'0')%2!=0){
                ans = num.substr(0,i+1);
                flag = true;
            }
