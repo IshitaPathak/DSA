@@ -8,17 +8,12 @@ public:
         int i=0;
         int j=0;
         while(i<n && j<m){
-           
                 if(g[i]<=s[j]){
                     cnt++;
-                  i++;
+                    i++; 
                 }
-                   j++;
-            
-            
-                           
-
-        }
+                  j++;
+            }
         return cnt;
     }
 };
